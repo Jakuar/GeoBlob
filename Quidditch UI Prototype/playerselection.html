@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<!--jbel763-->
+<html>
+
+<head>
+  <title>SQRL - Player Selection</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+    <div id="header">
+      <div id="logo">
+	  
+        <div id="logo_text">
+          <h1><a href="home.html">SQRL</a></h1>
+		  <h2>UK Summer Recreational Quidditch League</h2>
+        </div>
+		 
+		<div align= "right">
+		  </div>
+      </div>
+	  <div id="logo">
+	  <img src="sky.jpg" alt="Mountain View" style="width:1025px;height:100px">
+	  </div>
+	 
+     <div id="menubar"> 
+        <ul id="menu">
+          <li><a href="home.html">Home</a></li>
+		  <li><a>Schedule</a></li>
+		  <li><a>Standings</a></li>
+          <li class="selected"><a href="teamcreation.html">Team Creation</a>
+		</li>
+		  <li><a>Player</a>
+		  </li>
+		  <li><a>About</a></li>
+		  <li><a>Help</a></li> 
+        </ul>
+    </div>  
+	 </div>
+    <div id="content_header"></div>
+	
+    <div id="site_content">
+      		
+	  <table style="table-layout: fixed; width: 1025px; border-bottom: 1px solid #999; margin-bottom: 40px; ">
+  <tr >
+  <td align="left" style="width: 360px;">
+		<h2><b>Player Selection Guidelines</b></h2>
+		<p><b>Invite and/or accept player invites using the options provided below</b></p>
+		<p><b>If you are unable to find enough players to submit your team by the 27th of May, contact H Potter at h.potter@sqrl.co.uk</b></p>
+		<div class="form_settings">
+			<table align="center">
+			<tr>
+			<td>
+			
+			<input class="submit" type="submit" name="name" onclick="submitButton()" value="Submit Team" />
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<input class="cancel" type="submit" name="saveAndQuit" onclick="javascript:location.href='home.html'" value="Save and Quit" />
+			</td>
+			</tr>
+			<tr>
+            <td>
+			<input class="cancel" type="submit" name="discard" onclick="javascript:location.href='playerselection.html'" value="Discard Changes" />
+			</td>
+			</tr>
+			</table>
+			
+			
+			</div>
+		</td>
+    
+<td style="width:340px"><div id="centerbar" style="align: center">
+		<img src="" title="Team Image" id="teamImage" style="width:300px;height:300px">
+		</div> </td>
+		<td style="width:350px"><div id="team_info">
+	  
+	    <h2><b>Team Name</b></h2></b>
+		<h1 id="team" style="color: #0093C7"></h1>
+		<h2><b>Region</b></h2>
+		<b><h1 id="teamRegion" style="color: #0093C7"></h1></b>
+		<h2><b>Division </b></h2>
+		<b><h1 id="teamDivision" style="color: #0093C7"></h1></b> 
+
+    </div></td>
+		
+  </tr>
+
+</table>
+	  
+	<div class ="rightheading">
+	<h1>Player Invites</h1>
+	<p>Accept or reject player invites</p>
+	</div>
+	<div class ="centreheading" style="border-right: 1px solid #999;">
+	<h1>Search and Invite Players</h1>
+	<p>Enter a keyword such as a players name or position</p>
+		<form method="post" action="#" id="search_form">
+          <p style="padding-bottom: 0">
+            <input class="search" type="text" name="search_field" value="" /> 
+			<input name="bob" type="button" title="Search" value="Search" onclick= "search()"/>
+          </p>
+        </form>
+	</div>
+	<div class ="selected_players_heading" style="border-right: 1px solid #999;">
+	<h1>Selected Players</h1>
+	<p>Players that have been accepted into your team are listed here</p>
+	<p><b>You must have 7 people in your team. You can include 3 substitutes.</b></p> 
+	</div>
+	  <div class="sidebar">
+			
+<table id="requests">
+  <tr>
+    <th id="nameRequest" >Name</th>
+    <th id="positionRequest" >Position</th>
+    <th>Options</th>
+  </tr>
+  <tr>
+    <td>John Hopkins</td>
+    <td>Beater</td>
+	<td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)">
+	
+</td>
+  </tr>
+  <tr class="alt">
+    <td>Ernst Handel</td>
+    <td>Seeker</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>Helen Bennett</td>
+    <td>Chaser</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr class="alt">
+    <td>Königlich Essen</td>
+    <td>Chaser</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>Yoshi Tannamuri</td>
+    <td>Beater</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr class="alt">
+    <td>Giovanni Rovelli</td>
+    <td>Seeker</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr>
+    <td>Simon Crowther</td>
+    <td>Keeper</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+  <tr class="alt">
+    <td>Marie Bertrand</td>
+    <td>Chaser</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Accept" onClick="Javacsript:acceptRow(this)">
+	<input type="button" value = "Reject" onClick="Javacsript:deleteRow(this)"></td>
+  </tr>
+</table>
+        
+      </div>
+	  
+	  <div class="centerbar_hidden" id="searchBar">	
+		<table id="searchResults" style="searchresults">
+  <tr>
+    <th id="nameSearch" >Name</th>
+    <th id="positionSearch" >Position</th>
+    <th>Options</th>
+  </tr>
+  <tr>
+    <td>Bob Wilkins</td>
+    <td>Beater</td>
+	<td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+</td>
+  </tr>
+  <tr class="alt">
+    <td>Jimmy James</td>
+    <td>Seeker</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr>
+    <td>Hannah Handel</td>
+    <td>Keeper</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr class="alt">
+    <td>Dave Grosling</td>
+    <td>Chaser</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr>
+    <td>Sarah Bane</td>
+    <td>Beater</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr class="alt">
+    <td>Rupert Brill</td>
+    <td>Chaser</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr>
+    <td>Dave Robs</td>
+    <td>Keeper</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+  <tr class="alt">
+    <td>Jane Williams</td>
+    <td>Seeker</td>
+    <td>
+	<input type="button" value = "View Profile" onClick="openProfile()">
+	<input type="button" value = "Invite" onClick="Javacsript:acceptRowSearch(this)">
+  </tr>
+</table>
+
+	 </div>
+
+		<script>
+
+		</script>
+		
+		
+		<div class="leftbar">
+			
+			<table id="teamPlayers"  border="0" cellpadding="2">
+    <tr>
+        <td><b>Name</b></td>
+        <td><b>Position</b></td>
+        <td><b>Options</b></td>
+    </tr>
+</table>
+&nbsp;
+</div>		
+      </div>
+	  </div>
+<script>
+	
+	document.getElementById("team").innerHTML = sessionStorage.getItem('session_teamName');
+	document.getElementById("teamRegion").innerHTML = sessionStorage.getItem('session_teamRegion');
+	document.getElementById("teamDivision").innerHTML = sessionStorage.getItem('session_teamDivision');	
+	var dataImage = localStorage.getItem("session_image");
+    bannerImg = document.getElementById("teamImage");
+    bannerImg.src = "data:image/png;base64," + dataImage;
+	var table = document.getElementById("teamPlayers");
+	var rowCount = table.rows.length;
+	var row = table.insertRow(rowCount);
+	row.insertCell(0).innerHTML = "Your Name";
+	row.insertCell(1).innerHTML = "Keeper";
+	row.insertCell(2).innerHTML = '';
+	function acceptRow(obj) {
+	var table = document.getElementById("teamPlayers");
+	var rtable = document.getElementById("requests");
+	var rowCount = table.rows.length;
+	var row = table.insertRow(rowCount);
+
+	if (rowCount > 10){
+	alert("You cannot have more than 10 people in your team")
+	}else{
+
+	var index = obj.parentNode.parentNode.rowIndex;
+	var name = rtable.rows[index].cells.item(0).innerHTML;
+	var position = rtable.rows[index].cells.item(1).innerHTML;
+
+	row.insertCell(0).innerHTML = name;
+	row.insertCell(1).innerHTML = position;
+	row.insertCell(2).innerHTML = '<input type="button" value = "View Profile" onClick="openProfile()">';
+	rtable.deleteRow(index);
+
+	}
+	}
+	function deleteRow(obj) {
+		 
+		var index = obj.parentNode.parentNode.rowIndex;
+		var table = document.getElementById("requests");
+		table.deleteRow(index);
+	   
+	}
+
+	function submitButton(){
+	var table = document.getElementById("teamPlayers");
+	var rowCount = table.rows.length;
+
+	if (rowCount > 7) {
+	doubleCheck();
+	}
+	else{
+	alert("You need atleast 7 players to submit a team");
+	}
+	}
+
+	function acceptRowSearch(obj) {
+	var table = document.getElementById("teamPlayers");
+	var stable = document.getElementById("searchResults");
+	var rowCount = table.rows.length;
+	var row = table.insertRow(rowCount);
+
+	if (rowCount > 10){
+	alert("You cannot have more than 10 people in your team")
+	}else{
+
+	var index = obj.parentNode.parentNode.rowIndex;
+
+	var name = stable.rows[index].cells.item(0).innerHTML;
+	var position = stable.rows[index].cells.item(1).innerHTML;
+
+	row.insertCell(0).innerHTML = name;
+	row.insertCell(1).innerHTML = position;
+	row.insertCell(2).innerHTML = '<input type="button" value = "View Profile" onClick="openProfile()">';
+	stable.deleteRow(index);
+
+	}
+	}
+
+	function search() {
+	document.getElementById("searchBar").style.visibility = "visible";
+	document.getElementById("searchResults").style.visibility = "visible";
+
+	}
+
+	function load() {
+	   
+		console.log("Page load finished");
+
+	}
+
+	function openProfile() {
+		window.open("playerprofile.html");
+	}
+
+	function doubleCheck() {
+		var x;
+		if (confirm("Are you sure you want to submit this team?") == true) {
+			window.location.href = 'submitsuccess.html';
+		} else {
+		}
+		}
+</script>
+
+
+    <div id="content_footer"></div>
+    <div id="footer">
+	 <p><a href="home.html">Home</a> | <a>About</a> | <a>Help</a></p>
+    </div>
+  </div>
+</body>
+</html>
